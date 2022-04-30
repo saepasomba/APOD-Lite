@@ -13,6 +13,7 @@
 		431727BE281D196C004A8836 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431727BD281D196C004A8836 /* Preview Assets.xcassets */; };
 		431727CA281D1ECE004A8836 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431727C9281D1ECE004A8836 /* ApiManager.swift */; };
 		431727CD281D22A2004A8836 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431727CC281D22A2004A8836 /* APOD.swift */; };
+		431727CF281D7E4E004A8836 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 431727CE281D7E4E004A8836 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		431727BD281D196C004A8836 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		431727C9281D1ECE004A8836 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		431727CC281D22A2004A8836 /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
+		431727CE281D7E4E004A8836 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 		431727AA281D196B004A8836 = {
 			isa = PBXGroup;
 			children = (
+				431727CE281D7E4E004A8836 /* README.md */,
 				431727B5281D196B004A8836 /* APOD-Lite */,
 				431727B4281D196B004A8836 /* Products */,
 			);
@@ -147,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431727CF281D7E4E004A8836 /* README.md in Resources */,
 				431727BE281D196C004A8836 /* Preview Assets.xcassets in Resources */,
 				431727BB281D196C004A8836 /* Assets.xcassets in Resources */,
 			);
