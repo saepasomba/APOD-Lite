@@ -8,10 +8,11 @@
 import Foundation
 
 class ApiManager: ObservableObject {
-    @Published var apod: APOD? =  nil
+    @Published var apod: APOD? = nil
     
     func fetchData() {
-        if let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY") {
+        let apiKey = "taQSnNzxUQVhkLelLliOuD5gZE2CCjeLxSbck8Eq"
+        if let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=\(apiKey)") {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { data, response, error in
                 if error == nil {
