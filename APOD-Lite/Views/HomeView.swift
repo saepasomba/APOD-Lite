@@ -9,28 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var apiManager = ApiManager()
+    @State var isPresenting: Bool = false
+    @State var date: Date = Date()
     
     var body: some View {
         ZStack {
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    Button {
-                        print("Hello")
-                    } label: {
-                        Text("Custom date?")
-                            .padding()
-                            .background(
-                                .regularMaterial
-                            )
-                            .cornerRadius(25)
-                    }
-
-                }
-            }
-            .padding()
-            
             ScrollView {
                 VStack {
                     AsyncImage(url: URL(string: apiManager.apod?.hdurl ?? "")) { image in
@@ -73,8 +56,77 @@ struct HomeView: View {
             }
             .onAppear {
                 apiManager.fetchData()
+            }
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button {
+                        isPresenting.toggle()
+                    } label: {
+                        Text("Custom date?")
+                            .padding()
+                            .background(
+                                .regularMaterial
+                            )
+                            .cornerRadius(25)
+                    }
+                    
+                }
+            }
+            .padding()
         }
-        }
+        .overlay(
+            Group {
+                if isPresenting {
+                    ZStack {
+                        Color.black
+                            .opacity(0.9)
+                            .ignoresSafeArea()
+                        VStack {
+                            DatePicker(
+                                "What date?",
+                                selection: $date,
+                                displayedComponents: [.date]
+                            )
+                            .padding()
+                            HStack {
+                                Spacer()
+                                Button {
+                                    isPresenting.toggle()
+                                } label: {
+                                    Text("Cancel")
+                                        .padding()
+                                        .background(
+                                            .regularMaterial
+                                        )
+                                        .cornerRadius(25)
+                                }
+                                Button {
+                                    print("\(date)")
+                                    isPresenting.toggle()
+                                    apiManager.fetchData(date: date)
+                                } label: {
+                                    Text("Custom")
+                                        .padding()
+                                        .background(
+                                            .regularMaterial
+                                        )
+                                        .cornerRadius(25)
+                                        .foregroundColor(.green)
+                                }
+
+                            }
+                        }
+                        .padding()
+                        .background {
+                            Color(UIColor.systemBackground)
+                        }
+                        .cornerRadius(25)
+                    }
+                }
+            }
+        )
     }
 }
 
