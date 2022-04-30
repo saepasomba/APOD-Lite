@@ -43,12 +43,13 @@ struct HomeView: View {
                 }
                 .background(.regularMaterial)
                 .cornerRadius(25)
-                .shadow(color: Color(UIColor.label), radius: 2)
+                .shadow(color: Color(UIColor.label), radius: 1)
                 .padding()
                 VStack {
                     Text("Explanation")
                         .font(.title)
                         .fontWeight(.semibold)
+                        .padding(.bottom)
                     Text("\(apiManager.apod?.explanation ?? "Unknown")")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -62,7 +63,9 @@ struct HomeView: View {
                 HStack {
                     Spacer()
                     Button {
-                        isPresenting.toggle()
+                        withAnimation {
+                            isPresenting.toggle()
+                        }
                     } label: {
                         Text("Custom date?")
                             .padding()
@@ -93,7 +96,9 @@ struct HomeView: View {
                             HStack {
                                 Spacer()
                                 Button {
-                                    isPresenting.toggle()
+                                    withAnimation {
+                                        isPresenting.toggle()
+                                    }
                                 } label: {
                                     Text("Cancel")
                                         .padding()
@@ -103,9 +108,10 @@ struct HomeView: View {
                                         .cornerRadius(25)
                                 }
                                 Button {
-                                    print("\(date)")
-                                    isPresenting.toggle()
-                                    apiManager.fetchData(date: date)
+                                    withAnimation {
+                                        isPresenting.toggle()
+                                        apiManager.fetchData(date: date)
+                                    }
                                 } label: {
                                     Text("Custom")
                                         .padding()
