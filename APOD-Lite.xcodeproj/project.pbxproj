@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		431727B7281D196B004A8836 /* APOD_LiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431727B6281D196B004A8836 /* APOD_LiteApp.swift */; };
-		431727B9281D196B004A8836 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431727B8281D196B004A8836 /* ContentView.swift */; };
+		431727B9281D196B004A8836 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431727B8281D196B004A8836 /* HomeView.swift */; };
 		431727BB281D196C004A8836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431727BA281D196C004A8836 /* Assets.xcassets */; };
 		431727BE281D196C004A8836 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431727BD281D196C004A8836 /* Preview Assets.xcassets */; };
+		431727CA281D1ECE004A8836 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431727C9281D1ECE004A8836 /* ApiManager.swift */; };
+		431727CD281D22A2004A8836 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431727CC281D22A2004A8836 /* APOD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		431727B3281D196B004A8836 /* APOD-Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APOD-Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431727B6281D196B004A8836 /* APOD_LiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD_LiteApp.swift; sourceTree = "<group>"; };
-		431727B8281D196B004A8836 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		431727B8281D196B004A8836 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		431727BA281D196C004A8836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431727BD281D196C004A8836 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		431727C9281D1ECE004A8836 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		431727CC281D22A2004A8836 /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				431727B6281D196B004A8836 /* APOD_LiteApp.swift */,
-				431727B8281D196B004A8836 /* ContentView.swift */,
+				431727CB281D1F9A004A8836 /* Models */,
+				431727C4281D1C33004A8836 /* Views */,
 				431727BA281D196C004A8836 /* Assets.xcassets */,
 				431727BC281D196C004A8836 /* Preview Content */,
 			);
@@ -65,6 +70,23 @@
 				431727BD281D196C004A8836 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		431727C4281D1C33004A8836 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				431727B8281D196B004A8836 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		431727CB281D1F9A004A8836 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				431727C9281D1ECE004A8836 /* ApiManager.swift */,
+				431727CC281D22A2004A8836 /* APOD.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431727B9281D196B004A8836 /* ContentView.swift in Sources */,
+				431727B9281D196B004A8836 /* HomeView.swift in Sources */,
+				431727CD281D22A2004A8836 /* APOD.swift in Sources */,
+				431727CA281D1ECE004A8836 /* ApiManager.swift in Sources */,
 				431727B7281D196B004A8836 /* APOD_LiteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

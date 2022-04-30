@@ -11,7 +11,7 @@ import SwiftUI
 struct APOD_LiteApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
